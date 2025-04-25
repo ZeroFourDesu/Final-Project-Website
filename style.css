@@ -1,0 +1,373 @@
+/*variables to set default or set values to avoid any human mistakes.*/
+:root
+{
+    --primary-font-color: beige;
+    --default-padding-size: 1rem;
+    --default-bgcolor:rgba(0, 183, 255, 0.651);
+    --default-font: "Noto Sans JP";
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+* 
+{
+    box-sizing: border-box;
+}
+
+h1, h4
+{
+    color: var(--primary-font-color);
+    text-align: center;
+    font-family: var(--default-font);
+}
+
+#hcont1 p, #acont1 p, #bcont1 p,#ccont1 p 
+{
+    color: var(--primary-font-color);
+    padding: 1rem;
+    text-align: justify;
+    font-family: var(--default-font);
+}
+/*^^testing code*/
+
+/*This one's important but annoying so keep it, it's just to keep the bars from going haywire*/
+ul 
+{
+    list-style-type: none;
+    display: flex;
+    padding: 0.5rem;
+}
+
+
+/*This line is for the Navigation bar, I used rem cause its easier to setup for being mobile friendly*/
+#nav li, a 
+{
+    padding: 0.2rem;
+    font-size: 2vh;
+    font-family: var(--default-font);
+    color: black;
+    text-decoration: none;
+    left: 5px;
+}
+
+/*the container for both the placeholder logo and the word logo*/
+#PL
+{
+    color: beige;
+    position: relative;
+    padding: 0rem;
+    display: flex;
+    align-items: center; /* Aligns div and anchor vertically */
+    justify-content: left; /* Aligns them horizontally */
+    gap: 0px; /* Adds space between the div and anchor */
+}
+
+#logo
+{
+    bottom: 10px;
+    color: var(--primary-font-color);
+}
+
+#logo1
+{
+    height: 10%;
+    width: 10%;
+
+}
+
+#hb
+{
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    background-color:var(--default-bgcolor);
+    margin: 0 auto;
+    padding: 0;
+}
+
+li
+{
+    margin: 0.2rem;    
+    border: black;   
+}
+
+/*This one's for the background which uses a body with an id of "BG"*/
+body
+{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))/*,url(Images/placeholder.png)*/;
+    position: sticky;
+    top: 0rem;
+    background-attachment: local;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: lightblue;
+}
+
+#nav li a:hover
+{
+    transition-duration: 100ms;
+    color: beige;
+    margin: 0.2rem;
+    transition-timing-function: ease-in-out;
+}
+
+#nav li a.active
+{
+    font-weight: bold;
+    color: beige;
+}
+
+#hcont1, #acont1, #bcont1,#ccont1
+{
+    background-position: center;
+    justify-content: center;
+    display: flex;
+}
+
+#bcont1 img
+{
+    opacity: 0.5;
+    padding: 1rem;
+    max-width: 50%; /* Ensures the image doesn't exceed the container's width */
+    height: auto;    /* Maintains aspect ratio */
+}
+
+#bcont1 p
+{
+    font-size: 1rem;
+}
+
+#bcont2 img
+{
+    padding: 1rem;
+    max-width: 50%; /* Ensures the image doesn't exceed the container's width */
+    height: auto;    /* Maintains aspect ratio */
+    justify-content: center;
+}
+
+.section-setup
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.section-setup img {
+    display: block;
+    margin: auto;
+    object-fit: cover;
+}
+
+#acont1
+{
+    justify-content: center;
+    display: flex;
+}
+
+#acont1 img
+{
+    opacity: 0.5;
+    padding: 1rem;
+    max-width: 50%; /* Ensures the image doesn't exceed the container's width */
+    height: auto;    /* Maintains aspect ratio */
+
+}
+
+#acont1 p
+{
+    align-items: center;
+}
+
+
+#hcont2, #ccont2
+{
+    color: var(--primary-font-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.3rem;
+}
+
+#bcont2
+{
+    display: flex;
+    justify-content: center;
+}
+
+#bcont2 img
+{
+    height: auto;
+    max-width: 80%;
+}
+
+#acont2, #hcont2, #bcont3
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 4rem;
+}
+
+
+
+#acont2 img
+{
+    width: auto;
+    height: 120px;
+    border: 4px solid var(--default-bgcolor);
+    border-radius: 8px; 
+}
+
+#hcont2 video
+{
+    border: 5px solid var(--default-bgcolor); 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: auto;
+    height: 180px;
+}
+
+.centered-line {
+    width: 95%; 
+    border-radius: 1rem;
+    border: 3px solid orange; 
+}
+
+.setup
+{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    padding: var(--default-padding-size);
+    border-radius: 0.5rem;
+}
+
+.feet
+{
+    position: relative;
+    display: flex;
+    align-items: center; /* Aligns div and anchor vertically */
+    justify-content: center; /* Aligns them horizontally */
+    gap: 1rem; /* Adds space between the div and anchor */
+}
+
+.feet img
+{
+    height: 3rem;
+}
+
+.pfp 
+{
+    border: 1px solid beige;
+    border-radius: 50%;
+    width: auto;
+    height: 120px;
+    object-fit: cover;
+}
+
+.footerstuff p
+{
+    padding: 1rem;
+    color: var(--primary-font-color);
+}
+
+.footerstuff
+{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.artist-header
+{
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+.gallery
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+}
+
+/* Thumbnail Images */
+.gallery img.thumbnail {
+    width: 250px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 8px; /* Rounded corners for thumbnails */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for thumbnails */
+}
+
+.gallery img.thumbnail:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with transparency */
+}
+
+/* Modal Content (Enlarged Image) */
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    align-items: center;
+    position: relative;
+    top: 10%;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Caption */
+#caption {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
